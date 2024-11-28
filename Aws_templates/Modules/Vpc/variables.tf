@@ -4,39 +4,52 @@ variable "vpc_cidr" {
   type        = string
 }
 
-variable "subnet_cidr" {
+
+variable "subnet_1_cidr" {
   description = "A cidr block for the subnet"
-  default     = "10.0.10.0/24"
+  default     = "10.0.0.0/24"
   type        = string
 
 }
+
+variable "subnet_2_cidr" {
+  description = "A cidr block for the subnet"
+  default     = "10.0.1.0/24"
+  type        = string
+
+}
+
+variable "subnet_3_cidr" {
+  description = "A cidr block for the subnet"
+  default     = "10.0.2.0/24"
+  type        = string
+
+}
+
+variable "subnet_4_cidr" {
+  description = "A cidr block for the subnet"
+  default     = "10.0.3.0/24"
+  type        = string
+
+}
+
 variable "availability_zone" {
   description = "the availability zone to be selected"
   type        = list(string)
-  default     = ["eu-west-2a", "eu-west-2b", "eu-west-2c"]
+  default     = ["eu-west-2a", "eu-west-2c"]
 }
 
-variable "security_grp_tag_name" {
-  description = "security group name"
+variable "region" {
+  description = "The region to launch resources in"
+  default     = "eu-west-2"
 }
 
-variable "vpc_name_tag" {
-  description = "The tags for the vpc"
+variable "access_key" {
+  description = "IAM access_key"
   type        = string
 }
 
-variable "igw_name_tag" {
-  description = "Internet Gateway tag"
+variable "secret_key" {
+  description = "IAM secret_key"
   type        = string
 }
-
-variable "default_rt_name_tag" {
-  description = "default route table name tag"
-  type        = string
-}
-
-variable "subnet_name_tag" {
-  description = "subnet name tag"
-  type        = string
-}
-
