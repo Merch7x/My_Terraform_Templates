@@ -5,13 +5,6 @@ terraform {
       version = "~> 5.0"
     }
   }
-  cloud {
-    organization = "Merch7x"
-
-    workspaces {
-      name = "Vpc-Dev"
-    }
-  }
 }
 
 provider "aws" {
